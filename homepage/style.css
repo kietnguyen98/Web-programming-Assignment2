@@ -1,0 +1,63 @@
+body {
+    padding-top: 56px;
+    background-color: #B4D792;
+  }
+.na {
+background-color:#004A30;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 30%;
+}
+.banner{
+  text-align: center;
+  margin-top: 10px;
+  background-image: url("/homepage/banner.jpg");
+}
+.image{
+  margin-top: 2%;
+  margin-left: 36%;
+}
+h3{
+  margin-top: 15px;
+}
+.char{
+  color: black;
+}
+.wordart {
+  font-family: Arial, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.wordart.slate {
+    transform: scale(1, 1.5);
+    -webkit-transform: scale(1, 1.5);
+    -moz-transform: scale(1, 1.5);
+    -o-transform: scale(1, 1.5);
+    -ms-transform: scale(1, 1.5);
+}
+
+.wordart.slate .text {
+    font-family: Times, 'Times New Roman', serif;
+    font-weight: normal;
+    color: #2F5485;
+    text-shadow: 0.03em 0.03em 0px #B3B3B3;
+}
+.green{
+  background-color: #004A30;
+}
+.tourhot{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#copyright{
+  background-color: #222222;
+}

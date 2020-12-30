@@ -1,0 +1,22 @@
+#container{
+    margin-top: 70px;
+}
+#about-us-img{
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px 0px gainsboro;
+}
+#about-us-container{
+    padding: 20px;
+    background-color: gainsboro;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+footer{
+    margin-top: 50px;
+}
+.card{
+    height: 100%;
+}
+#copyright{
+    background-color: #222222;
+}
