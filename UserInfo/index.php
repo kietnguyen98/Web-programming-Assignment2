@@ -96,6 +96,8 @@
                             if(($user_data['avatar']) != NULL):
                         ?>
                             <img class="card-img-top" src="data:image/jpg;base64,<?php echo base64_encode($user_data['avatar'])?>" alt="User Avatar">
+                        <?php else:?>
+                            <i class="text-center text-muted"><strong>Bạn chưa có ảnh đại diện, hãy cập nhật ảnh đại diện của mình !</strong></i>
                         <?php endif ?>
                         <div class="card-header">
                             <h5 class="text-center text-dark">Thông tin cá nhân</h5>
