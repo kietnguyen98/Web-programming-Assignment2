@@ -37,7 +37,7 @@
             <div class="card-header text-center display-4" id="Name">
                 <?php echo $product_data['product_name']; ?>
             </div>
-            <img class="card-img-top img-fluid" src="<?php echo $product_data['product_img']; ?>" alt="Card image cap">
+            <img class="card-img-top img-fluid" src="data:image/jpg;base64,<?php echo base64_encode($product_data['product_img'])?>" alt="Card image cap">
             <div class="card-body" id="title-description">
                 <h4 class="card-title" id="title">
                     <?php echo $product_data['product_name']; ?> (Mã Tour:
@@ -86,6 +86,15 @@
                                 $get_account_query = "select username from account where account_id='$account_id'";
                                 $get_account_result = mysqli_query($connect_handle, $get_account_query);
                                 $account = mysqli_fetch_assoc($get_account_result);
+                                $get_user_data = "select avatar from user_information where user_id = '$account_id'";
+                                $get_user_data_result = mysqli_query($connect_handle, $get_user_data);
+                                $user_data = mysqli_fetch_assoc($get_user_data_result);
+                                if(($user_data == NULL) or ($user_data['avatar'] == NULL)){
+                                    echo '<img alt="Blank User Avatar" style="height: 30px; width: 30px; border-radius:50% ;  border: 2px solid #555;" src="../productImg/blank-avatar.jpg">';
+                                }else{
+                                    echo '<img alt="User Avatar" style="height:30px ; width : 30px; border-radius: 50%;" src="data:image/jpg;base64,'.base64_encode($user_data['avatar']).'"/>';
+                                }
+                                echo " ";
                                 echo $account['username'];
                                 ?>
                             </strong>

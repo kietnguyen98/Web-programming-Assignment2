@@ -68,11 +68,11 @@ function add($product_id, $product_name, $product_img,$product_description,$prod
 
 function edit($product_id, $product_name,$product_img,$product_description,$product_startdate,$product_enddate,$product_price)
 {
+    echo "a";
     global $conn;
     connect_db();
     $product_id = addslashes($product_id);
     $product_name = addslashes($product_name);
-    $product_img = addslashes($product_img);
     $product_description = addslashes($product_description);
     $product_startdate = addslashes($product_startdate);
     $product_enddate = addslashes($product_enddate);
@@ -89,6 +89,12 @@ function edit($product_id, $product_name,$product_img,$product_description,$prod
             WHERE product_id='$product_id'
     ";
     $query = mysqli_query($conn, $sql);
+    echo $product_id."<br>";
+    echo $product_name."<br>";
+    echo $product_description."<br>";
+    echo $product_startdate."<br>";
+    echo $product_enddate."<br>";
+    echo $product_price."<br>";
     return $query;
 }
 function delete($product_id)

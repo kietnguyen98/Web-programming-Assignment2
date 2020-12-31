@@ -80,7 +80,7 @@ function add($account_id, $username, $password,$email,$role)
     connect_db();
     $account_id = addslashes($account_id);
     $username = addslashes($username);
-    $password = addslashes($password);
+    $password = md5($password);
     $email = addslashes($email);
     $role = addslashes($role);
     $sql = "
@@ -97,7 +97,7 @@ function edit($account_id, $username, $password,$email,$role)
     connect_db();
     $account_id = addslashes($account_id);
     $username = addslashes($username);
-    $password = addslashes($password);
+    $password = md5($password);
     $email = addslashes($email);
     $role = addslashes($role);
  
@@ -118,7 +118,7 @@ function delete($account_id)
     connect_db();
     $sql = "
             DELETE FROM account
-            WHERE account_id = $account_id
+            WHERE account_id = '$account_id'
     ";
     $query = mysqli_query($conn, $sql);
     return $query;

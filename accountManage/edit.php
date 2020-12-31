@@ -83,7 +83,7 @@ disconnect_db();
                 <tr>
                     <td>password</td>
                     <td>
-                        <input type="text" name="password" value="<?php echo !empty($data['password']) ? $data['password'] : ''; ?>"/>
+                        <input type="password" name="password" value="<?php echo !empty($data['password']) ? $data['password'] : ''; ?>"/>
                         <?php if (!empty($errors['password'])) echo $errors['password']; ?>
                     </td>
                 </tr>

@@ -56,7 +56,7 @@ $select_card_data_result = mysqli_query($connect_handle, $select_card_data);
                                     <?php echo 'active'; ?>
                                 <?php endif ?>
                                 ">
-                                <img src=<?php echo $slide_data['product_img']; ?> id="slide-img" style="opacity: 0.9;" alt=<?php echo $slide_data['product_name']; ?> class="img-fluid">
+                                <img src="data:image/jpg;base64,<?php echo base64_encode($slide_data['product_img'])?>" id="slide-img" style="opacity: 0.9;" alt="<?php echo $slide_data['product_name']; ?>" class="img-fluid">
                                 <div class="carousel-caption text-light">
                                     <h1 class="text-uppercase"><?php echo $slide_data['product_name']; ?></h1>
                                     <p><strong>Mã Tour : </strong><?php echo $slide_data['product_id']; ?> </p>
@@ -84,7 +84,7 @@ $select_card_data_result = mysqli_query($connect_handle, $select_card_data);
             <?php while($card_data = mysqli_fetch_assoc($select_card_data_result)): ?>
                 <div class="col-lg-3 col-md-3 mb-4">
                     <div class="card text-center">
-                        <img src="<?php echo $card_data['product_img']; ?>" class="card-img-top">
+                        <img src="data:image/jpg;base64,<?php echo base64_encode($card_data['product_img'])?>" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-dark text-uppercase"><?php echo $card_data['product_name']; ?></h5>
                             <p class="card-text text-center text-dark"><strong>Mã Tour : </strong><?php echo $card_data['product_id']; ?></p>

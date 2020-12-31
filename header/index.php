@@ -67,8 +67,7 @@
                         <strong>
                         <?php 
                             if($_SESSION['avatar'] == NULL){
-                                echo '<i class="fa fa-user" aria-hidden="true">
-                                </i>';
+                                echo '<img alt="Blank User Avatar" style="height: 30px; width: 30px; border-radius:50% ;  border: 2px solid #555;" src="../productImg/blank-avatar.jpg">';
                             }else{
                                 echo '<img alt="User Avatar" style="height:30px ; width : 30px; border-radius: 50%;" src="data:image/jpg;base64,'.base64_encode($_SESSION['avatar']).'"/>';
                             }

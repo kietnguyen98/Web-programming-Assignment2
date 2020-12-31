@@ -93,7 +93,7 @@ $function=$result;
                         <a id="fix" class="btn btn-success btn-sm"
                             onclick="window.location='edit.php?account_id=<?php echo $item['account_id']; ?>'">Update</a>
                         <input id="fix" type="hidden" name="account_id" value="<?php echo $item['account_id']; ?>" />
-                        <button class="btn btn-danger btn-sm" id="delete" onclick="return confirm('Are you sure?');"
+                        <button class="btn btn-danger btn-sm" id="delete" onclick="return confirm('Bạn có chắc chắn xóa tài khoản này không ?');"
                             type="submit" name="delete">Delete </button>
                     </form>
                 </td>

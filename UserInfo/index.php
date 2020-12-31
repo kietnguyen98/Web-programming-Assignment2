@@ -91,16 +91,19 @@
                         $select_user_result = mysqli_query($connect_handle, $select_user_query); 
                         $user_data = mysqli_fetch_assoc($select_user_result);
                     ?>
-                    <div class="card">
-                        <?php 
+                    <div class="text-center" style="padding-bottom: 20px;">
+                    <?php 
                             if(($user_data['avatar']) != NULL):
                         ?>
-                            <img class="card-img-top" src="data:image/jpg;base64,<?php echo base64_encode($user_data['avatar'])?>" alt="User Avatar">
+                            <img class="img-thumbnail" style="height: 300px; width: 300px; border-radius:50% ;  border: 2px solid #555;" src="data:image/jpg;base64,<?php echo base64_encode($user_data['avatar'])?>" alt="User Avatar">
                         <?php else:?>
-                            <i class="text-center text-muted"><strong>Bạn chưa có ảnh đại diện, hãy cập nhật ảnh đại diện của mình !</strong></i>
+                            <img class="img-thumbnail" style="height: 300px; width: 300px; border-radius:50% ;  border: 2px solid #555;" src="../productImg/blank-avatar.jpg" alt="Blank User Avatar">
+                            <p><i class="text-center text-muted">Bạn chưa có ảnh đại diện, hãy cập nhật !</i></p>
                         <?php endif ?>
+                    </div>
+                    <div class="card">
                         <div class="card-header">
-                            <h5 class="text-center text-dark">Thông tin cá nhân</h5>
+                            <h5 class="text-center text-primary">Thông tin cá nhân</h5>
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item text-left"><span class="pull-left"><strong>Tên: </strong>

@@ -48,12 +48,12 @@ $function=$result;
 <body>
     <div>
         <?php include_once("../header/index.php"); ?>
-    </div>
+    </div>  
     <div class="container-fluid" style="padding-top: 80px;">
     <h1 class="display-4 text-dark text-center">PRODUCTS LIST</h1>
     <hr style="width:70%;text-align:center;">
     <div class="text-center">
-        <button class="btn btn-primary" id="add" onclick="window.location='add.php'">Add Product</button>
+        <button class="btn btn-primary" id="add" onclick="window.location='add.php'">Thêm Tour mới</button>
     </div>
     <br>
         <table class="table table-sm table-bordered">
@@ -61,7 +61,7 @@ $function=$result;
             <tr class="table-success text-center">
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">ImgDirectory</th>
+                <th scope="col">Image</th>
                 <th scope="col">Description</th>
                 <th scope="col">Start Date</th>
                 <th scope="col">End Date</th>
@@ -79,7 +79,7 @@ $function=$result;
                     <?php echo $item['product_name']; ?>
                 </td>
                 <td>
-                    <?php echo $item['product_img']; ?>
+                <img src="data:image/jpg;base64,<?php echo base64_encode($item['product_img'])?>" style="height:300px; width:450px;" alt="<?php echo $item['product_name']; ?>">
                 </td>
                 <td>
                     <?php echo $item['product_description']; ?>
@@ -99,8 +99,8 @@ $function=$result;
                             onclick="window.location = 'edit.php?product_id=<?php echo $item['product_id']; ?>'">Update</a>
                         <input id="fix" type="hidden" name="product_id" value="<?php echo $item['product_id']; ?>" />
                         <br>
-                        <button class="btn btn-danger btn-block" id="delete" onclick="return confirm('Are you sure?');"
-                            type="submit" name="delete">Delete </button>
+                        <button class="btn btn-danger btn-block" id="delete" onclick="return confirm('Bạn có chắc chắn xóa Tour này không ?');"
+                            type="submit" name="delete">Delete</button>
                     </form>
                 </td>
             </tr>
